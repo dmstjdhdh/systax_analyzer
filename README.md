@@ -35,7 +35,7 @@ cd /mnt/c/Users/<YourUsername>/Desktop/something....
 
 - Compile with command
 ```bash
-g++ -o bin/syntax_analyzer main.cpp parser.cpp node.cpp
+g++ -o bin/syntax_analyzer main.cpp
 ```
 
 - Test with command
