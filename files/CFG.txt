@@ -1,0 +1,20 @@
+S -> CODE
+CODE -> VDECL CODE | FDECL CODE | ''
+VDECL -> vtype id semi | vtype ASSIGN semi
+ASSIGN -> id assign RHS
+RHS -> ADDSUB_EXPR | literal | character | boolstr
+ADDSUB_EXPR -> ADDSUB_EXPR addsub MULTDIV_EXPR | MULTDIV_EXPR
+MULTDIV_EXPR -> MULTDIV_EXPR multdiv ATOM | ATOM
+ATOM -> lparen ADDSUB_EXPR rparen | id | num
+FDECL -> vtype id lparen ARG rparen lbrace BLOCK RETURN rbrace
+ARG -> vtype id MOREARGS | ''
+MOREARGS -> comma vtype id MOREARGS | ''
+BLOCK -> STMT BLOCK | ''
+STMT -> VDECL | ASSIGN semi | IFSTMT | IFSTMT_NO_ELSE | WHILESTMT | RETURN
+IFSTMT -> if lparen COND rparen lbrace BLOCK rbrace ELSE
+IFSTMT_NO_ELSE -> if lparen COND rparen lbrace BLOCK rbrace
+WHILESTMT -> while lparen COND rparen lbrace BLOCK rbrace
+COND -> COND comp boolstr | boolstr
+ELSE -> else lbrace BLOCK rbrace
+ELSE -> ''
+RETURN -> return RHS semi

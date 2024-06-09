@@ -1,0 +1,14 @@
+1. Rejected!
+   SyntaxError: Invalid token set
+2. Rejected!
+   SyntaxError: Invalid token set
+3. Rejected!
+   Invalid reduce action rule: 20
+4. Rejected!
+   SyntaxError: Invalid token set
+5. Rejected!
+   SyntaxError: Invalid token set
+6. Rejected!
+   SyntaxError: Invalid token set
+7. Rejected!
+   SyntaxError: Invalid token set
